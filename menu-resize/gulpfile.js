@@ -38,6 +38,7 @@ gulp.task('styles', function () {
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(concat('styles.css'))
     .pipe(sourcemaps.write(mapDest))
 		.pipe(gulp.dest(cssDest));
 });
