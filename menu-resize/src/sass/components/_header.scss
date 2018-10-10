@@ -10,10 +10,20 @@
 	display: block;
 	background-color: $main-color;
 
-  height: 80px;
+  min-height: 80px;
 
 	.navbar-toggler {
-		margin-top: 15px;
+		margin-top: 10px;
+
+    i {
+      color:#fff;
+      font-size:40px;
+    }
+
+    &.navbar-toggler-right {
+      right:0px;
+    }
+
 	}
 
 	.navbar-brand img {

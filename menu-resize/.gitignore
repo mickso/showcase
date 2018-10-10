@@ -1,7 +1,6 @@
-resources/js
-resources/css
-resources/map
+assets/js
+assets/css
+assets/map
 node_modules
 
-.dropbox
 desktop.ini
