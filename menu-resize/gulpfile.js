@@ -28,9 +28,9 @@ var cleanCSS = require('gulp-clean-css');
 
 /** constants **/
 var cssFiles = [
-  './sass/app.scss'
+  './src/sass/app.scss'
 ];
-var cssDest = './resources/css/';
+var cssDest = './assets/css/';
 
 /** task **/
 gulp.task('sass', function () {
@@ -54,8 +54,8 @@ var jsFiles = [
   'node_modules/tether/dist/js/tether.min.js',
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/bootstrap/dist/js/bootstrap.min.js',
-  'js/util/**/*.js',
-  'js/src/**/*.js'
+  'src/js/util/**/*.js',
+  'src/js/src/**/*.js'
 ];
 var jsDest = './assets/js';
 
