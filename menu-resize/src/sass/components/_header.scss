@@ -1,4 +1,4 @@
-.navbar-toggler, .navbar-brand img, .navbar .container {
+.navbar-toggler, .navbar-brand img, .navbar {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -8,24 +8,25 @@
 .navbar {
 
 	display: block;
-	background-color: map-get($theme-colors, primary);
-	
-    height: 80px;
-	
+	background-color: $main-color;
+
+  height: 80px;
+
 	.navbar-toggler {
 		margin-top: 15px;
 	}
 
-	.navbar-brand>img {
+	.navbar-brand img {
 	  height: 60px;
 	}
 
+  //only resize menu in desktop devices or large tablets
+  @include respond-above(md) {
     &.collapsed{
-      height: 46px;
+      height: 56px;
 
-      .navbar-brand>img {
+      .navbar-brand img {
         height: 40px;
-
       }
 
       .navbar-toggler {
@@ -35,10 +36,11 @@
       .navbar-brand {
         padding: 0;
       }
-    }  
 
+    }
+  }
 }
 
 .navbar .navbar-nav .nav-link.active {
-  color: $midnight-blue;
+  color: $secondary-color;
 }
