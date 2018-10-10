@@ -10,7 +10,7 @@
 	display: block;
 	background-color: $main-color;
 
-  min-height: 80px;
+  height: 80px;
 
 	.navbar-toggler {
 		margin-top: 10px;
@@ -31,7 +31,7 @@
 	}
 
   //only resize menu in desktop devices or large tablets
-  @include respond-above(md) {
+  @include respond-above(lg) {
     &.collapsed{
       height: 56px;
 
