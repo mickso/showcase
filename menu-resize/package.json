@@ -3,20 +3,17 @@
   "version": "0.0.1",
   "description": "The golden buddha website",
   "main": "index.js",
-  "scripts": {
-    "test": "test",
+  "scripts": {    
     "gulp": "gulp"
   },
   "author": "goldenbuddha",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-beautify": "^1.0.1",
     "gulp-jsvalidate": "^4.0.0",
-    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify-es": "^1.0.4",

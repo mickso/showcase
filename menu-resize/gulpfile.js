@@ -8,7 +8,6 @@ var gulp = require('gulp');
 //==============================================================================
 /** dependencies **/
 var concat = require('gulp-concat');
-var rename = require('gulp-rename');
 
 
 //==============================================================================
@@ -54,11 +53,11 @@ var jsValidate = require('gulp-jsvalidate');
 var jsFiles = [
   'node_modules/tether/dist/js/tether.min.js',
   'node_modules/jquery/dist/jquery.min.js',
-  'node_modules/bootstrap/dist/js/bootstrap.min.js',  
+  'node_modules/bootstrap/dist/js/bootstrap.min.js',
   'js/util/**/*.js',
   'js/src/**/*.js'
 ];
-var jsDest = './resources/js';
+var jsDest = './assets/js';
 
 /** task **/
 gulp.task('scripts', function() {
@@ -89,7 +88,7 @@ var conn = ftp.create( {
 gulp.task( 'deploy', function () {
 
     var globs = [
-      "./assets/**",      
+      "./assets/**",
       "index.html"
     ];
 
