@@ -1,0 +1,7 @@
+@include respond-below(lg) {
+
+  .navbar{
+    height:auto;
+    min-height:80px;
+  }
+}

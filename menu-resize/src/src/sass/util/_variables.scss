@@ -1,7 +1,7 @@
 //==============================================================================
 //  Paths
 //==============================================================================
-$resource-path: "/resources";
+$resource-path: "/assets";
 $image-path: "#{$resource-path}/image";
 $font-path: "#{$resource-path}/font";
 
@@ -9,39 +9,23 @@ $font-path: "#{$resource-path}/font";
 //  Colors
 //==============================================================================
 /** Theme colors **/
-$golden-yellow: #ffc000;
-$light-gray: #f4f4f4;
-$midnight-blue: #34495e;
-$grey: #D0D0D0;
+$main-color: #000000;
+$secondary-color: #ffffff;
 
 /** Utility colors **/
 $error-color:#dc3545;
 
 //==============================================================================
-//  fonts
-//==============================================================================
-$default-font: "montserrat";
-
-//==============================================================================
 //  Overrides
 //==============================================================================
 /** bootstrap overrides **/
-$btn-primary-bg: $golden-yellow;
-$link-color: #ffffff;
-$link-hover-color: #000000;
+$link-color: $secondary-color;
+$link-hover-color: darken( $secondary-color, 10% );
 
-$navbar-bg: $golden-yellow;
-$navbar-inverse-color: rgba(255, 255, 255, 1);
+$navbar-bg: $main-color;
 
-$body-bg: #ffffff;
-$body-color: #111;
-
-$teal: #ffffff;
-
-$theme-colors: (
-  "primary": #ffc000,
-  "danger": #ff4136,
-);
+$body-bg: $secondary-color;
+$body-color: $main-color;
 
 $grid-breakpoints: (
   xs: 0,
@@ -49,7 +33,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px
-) !default;
+);
 
 /** fontawesome overrides **/
 $fa-font-path: $font-path;

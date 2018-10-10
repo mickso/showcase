@@ -1,0 +1,56 @@
+.navbar-toggler, .navbar-brand img, .navbar {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar {
+
+	display: block;
+	background-color: $main-color;
+
+  height: 80px;
+
+	.navbar-toggler {
+		margin-top: 10px;
+
+    i {
+      color:#fff;
+      font-size:40px;
+    }
+
+    &.navbar-toggler-right {
+      right:0px;
+    }
+
+	}
+
+	.navbar-brand img {
+	  height: 60px;
+	}
+
+  //only resize menu in desktop devices or large tablets
+  @include respond-above(lg) {
+    &.collapsed{
+      height: 56px;
+
+      .navbar-brand img {
+        height: 40px;
+      }
+
+      .navbar-toggler {
+        margin-top: 4px;
+      }
+
+      .navbar-brand {
+        padding: 0;
+      }
+
+    }
+  }
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: $secondary-color;
+}

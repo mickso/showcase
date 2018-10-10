@@ -8,7 +8,6 @@ var gulp = require('gulp');
 //==============================================================================
 /** dependencies **/
 var concat = require('gulp-concat');
-var rename = require('gulp-rename');
 
 
 //==============================================================================
@@ -29,16 +28,17 @@ var cleanCSS = require('gulp-clean-css');
 
 /** constants **/
 var cssFiles = [
-  './sass/app.scss'
+  './src/sass/app.scss'
 ];
-var cssDest = './resources/css/';
+var cssDest = './assets/css/';
 
 /** task **/
-gulp.task('sass', function () {
+gulp.task('styles', function () {
 	return gulp.src(cssFiles, { base: '.' })
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(concat('styles.css'))
     .pipe(sourcemaps.write(mapDest))
 		.pipe(gulp.dest(cssDest));
 });
@@ -54,11 +54,10 @@ var jsValidate = require('gulp-jsvalidate');
 var jsFiles = [
   'node_modules/tether/dist/js/tether.min.js',
   'node_modules/jquery/dist/jquery.min.js',
-  'node_modules/bootstrap/dist/js/bootstrap.min.js',  
-  'js/util/**/*.js',
-  'js/src/**/*.js'
+  'node_modules/bootstrap/dist/js/bootstrap.min.js',
+  'src/js/**/*.js',
 ];
-var jsDest = './resources/js';
+var jsDest = './assets/js';
 
 /** task **/
 gulp.task('scripts', function() {
@@ -89,7 +88,7 @@ var conn = ftp.create( {
 gulp.task( 'deploy', function () {
 
     var globs = [
-      "./assets/**",      
+      "./assets/**",
       "index.html"
     ];
 
