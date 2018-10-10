@@ -1,0 +1,32 @@
+{
+  "name": "goldenbuddhasite",
+  "version": "0.0.1",
+  "description": "The golden buddha website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "gulp": "gulp"
+  },
+  "author": "goldenbuddha",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-jsvalidate": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify-es": "^1.0.4",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.3",
+    "tether": "^1.4.4"
+  }
+}
