@@ -33,7 +33,7 @@ var cssFiles = [
 var cssDest = './assets/css/';
 
 /** task **/
-gulp.task('sass', function () {
+gulp.task('styles', function () {
 	return gulp.src(cssFiles, { base: '.' })
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass().on('error', sass.logError))
@@ -54,8 +54,7 @@ var jsFiles = [
   'node_modules/tether/dist/js/tether.min.js',
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/bootstrap/dist/js/bootstrap.min.js',
-  'src/js/util/**/*.js',
-  'src/js/src/**/*.js'
+  'src/js/**/*.js',
 ];
 var jsDest = './assets/js';
 
